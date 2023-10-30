@@ -1,0 +1,18 @@
+<div class="container my-4">
+    <p>Add new Server or Blueprint</p>
+    <div class="mb-3">
+        <label for="text" class="form-label">Server Name</label>
+        <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" #serverNameInput>  -->
+        <!-- Local reference means reference of this element -->
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" [(ngModel)]="server_name">
+        <!-- <p>{{server_name}}</p> -->
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Server Content</label>
+        <!-- <input type="text" class="form-control" id="exampleInputPassword1" #serverContentLR> -->
+        <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="server_content">
+    </div>
+
+    <!-- <button type="submit" class="btn btn-primary" (click)="addServer(serverNameInput)">Add Server</button> -->
+    <button type="submit" class="btn btn-primary" (click)="addServer()">Add Server</button>
+</div>

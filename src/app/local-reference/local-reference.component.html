@@ -1,0 +1,16 @@
+<div class="container">
+        <h3 style="text-align: center; color: green !important; margin-top: 20px;">Local Reference Concepts (@ViewChild)</h3>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" #email>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass" #pass>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary" (click)="getValues(email, pass)">Submit</button> -->
+        <button type="submit" class="btn btn-primary" (click)="getValues()">Submit</button>
+
+
+        <!-- <ng-content></ng-content> // ng-content directives: it looks like component but it's not component -->
+</div>

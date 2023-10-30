@@ -1,0 +1,46 @@
+<!-- 
+  -> if you want to use event, always use like (eventName).
+  -> We have two types of directives: Structural '*ngFor' and Attribute directives '[ngClass]'.
+  -> To show data on html we have string interpolation '{{ }}' and property binding []
+  ->  *ngIf, *ngFor, [ngStyle], [ngClass], if-else
+ -->
+
+<div class="container my-4">
+    <h3 style="text-align: center; color: green !important; margin-top: 20px;">Directives Demo
+    </h3>
+    <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd" (click)="toggleMessage(message)">{{message}}</button>
+
+    <div class="card my-4" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <div *ngIf="onlyOdd">
+                <li class="list-group-item" *ngFor="let odd of oddNumber" [ngClass]="{oddCss: odd%2 !== 0}" [ngStyle]="{backgroundColor: odd % 2 !== 0 ? 'yellow' : 'transparent'}">
+                    {{odd}}
+                </li>
+                <!-- return true by ngClass-->
+            </div>
+            <div *ngIf="!onlyOdd">
+                <li class="list-group-item" *ngFor="let even of evenNumber" [ngClass]="{oddCss: even%2 !== 0}" [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow' : 'transparent'}">
+                    {{even}}
+                </li> <!-- return false by ngClass-->
+            </div>
+        </ul>
+    </div>
+
+    <!-- If-Else -->
+    <button class="btn btn-primary" (click)="addServer()">Add server</button>
+    <p *ngIf="serverCreated; else noServer">{{serverName}}</p>
+    <ng-template #noServer>
+        <p>No server was created.</p>
+    </ng-template>
+
+    <!-- ngStyle -> dynamically assign a style
+  ngClass -> dynamically add or remove css classes -->
+
+    <button class="btn btn-danger my-4" (click)="serverStatus = !serverStatus">Check somthing</button>
+    <p *ngIf="serverStatus; else serverOff" [ngStyle]="{backgroundColor: getColor(), color: 'white'}">Server is online
+    </p>
+    <ng-template #serverOff>
+        <p [ngClass]="{online: serverStatus === false}">Server is offline</p>
+    </ng-template>
+
+</div>

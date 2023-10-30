@@ -1,0 +1,5 @@
+<h3 style="text-align: center; color: green !important; margin-top: 20px;">Binding to custom event (child to parent) & Binding to custom properties (parent to child)</h3>
+
+<app-cockpit (srvCreated)="addNewServer($event)"></app-cockpit> <!-- Binding to custom event => [child_event]="parent_func($event)"  -> here we are giving child data to the parent component -->
+
+<app-server-element *ngFor="let serverD of serverDetails" [srcElement]="serverD"></app-server-element> <!-- Binding to custom properties => [child_property]="parent"  -> here we are giving parent data to the child component -->

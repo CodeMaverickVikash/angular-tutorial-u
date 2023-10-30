@@ -1,0 +1,85 @@
+To make angular app, First need to install angular cli using command "npm install -g @angular/cli", don't need to do when already installed
+to check cli version use command "ng --version"
+to create app, use "ng new app_name"
+
+File and folder in angular
+/src
+	/app - it's a component
+	/assests - include extra images and css
+	/environments - server build related configuration
+	index.html - first loaded file in whole project
+	main.ts
+	style.css - you can write global css
+For advanced use:
+	package-lock.json - it has the details information about all packages which are in package.json
+	angular.json - Application configuration file
+	tsconfig files (tsconfig.json) - Typescript configuration file
+	.browserlistrc - Details about browser support
+	karma.config.js
+	polyfills.ts
+
+There are three types of server - 1) Dev(Development) server. 2) Testing server. 3) Production server (live for world)
+
+Databinding = communication btw .ts(component) and .html(view)
+
+Typescript code -------------> Output data ->---------------------> Template (HTML)
+									|
+						1) String interpolation -> {{Property_data}}
+									|
+						2) Property binding -> [attributes_of_html] = "property_from_ts"
+									|
+Typescript code <-------------<- User event <----------------------- Template (HTML)
+									|
+						Event binding -> (event) = "expression"
+						
+						
+						Combination of both: Two way binding --> [ngModal] = "Property_data"
+
+Property means varibale inside a component class
+
+Directives -> it is the instructions in DOM
+
+--> ngModal - used for two way binding
+--> *ngIf
+--> ng-template
+--> *ngFor 
+--> ngClass
+
+Event 
+--> ngSubmit
+
+
+lifecycle hook
+1) ngOnChanges: Called after a bound input property changes
+2) ngOnInit: Called once the component is initialized
+3) ngDoCheck: Called during every change detection run
+4) ngAfterContentInit: called after content(ng-content) has been projected into view
+5) ngAfterContentChecked: Called every time the projected content has been checked
+6) ngAfterViewInit: called after the component's view (and child views) has been initialized
+7) ngAfterViewChecked: Called every time the view(and child views) have been checked
+8) ngOnDestroy: Called once the component is about to be destroy
+
+Serices in angular
+Service is the classes that may have property(data) and function,
+we can use these stuff in different files. Services are halper which helps us to share the data with multiple
+complonent.
+
+To create service use "ng g service nameOfservice"
+
+Property binding is used to change/update the property or attribute
+String interpolation accepts only number and string values but property binding also accepts boolean value with these.
+
+componentName.component.ts - componentName.component.html --> "ng g c component_name" or "ng g c component_name"
+serviceName.service.ts  --> 'ng g service name'
+moduleName.module.ts --> 'ng g m name --routing'
+pipeName.pipe.ts --> 'ng g p pipe_name'
+directiveName.directive.ts --> 'ng g d directive_name'
+
+Module in angular, it is not reusable -> Module <----- component
+Module is the complete feature itself, for example user authentication is the whole module -> login, signup, forget password and confirm email are the components.
+
+Custom Pipes
+custom Directives
+Custom module
+
+section 7 running

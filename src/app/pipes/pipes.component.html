@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- uppercase and lowercase pipe -->
+    <h4>{{title | uppercase}}</h4>
+    <h4>{{title | lowercase}}</h4>
+
+    <!-- date pipe with params- 'fullDate' -->
+    <h5>{{today | date: 'fullDate'}} </h5>
+
+    <!-- slice pipe with params - after : that is params, 3 is first para and 6 is second para  -->
+    <h4>{{title | slice : 3 : 6}}</h4>
+
+    <!-- Two pipe at same time -->
+    <h4>{{title | slice : 3 : 6 | uppercase}}</h4>
+
+    <!-- Json pipe - to see the object in template -->
+    <h4>{{user | json}}</h4>
+
+    <!-- Number pipe -->
+    <h4>{{2000.3000 | number : '2.2-3'}}</h4>
+    <h4>{{2.3 | number : '3.3-5'}}</h4>
+
+    <!-- currency pipe -->
+    <h4>{{20 | currency : 'INR'}}</h4>
+    <h4>{{20 | currency : 'USD'}}</h4>
+</div>

@@ -1,0 +1,13 @@
+skipped 25
+Section 20 running
+
+Reporting:
+Angular covered:
+1) Dynamic component - Populate component using Typescript code, anywhere in the 
+application (like alertBox, showError)
+2) Basic of standalone component
+3) Basic of NgRx (Redux)
+4) Service worker
+
+state is just data
+

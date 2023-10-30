@@ -1,0 +1,30 @@
+1) Basic of typescript
+2) Basic of angular
+3) Databinding?, String interpolation, Property binding, Event binding and ngModel for
+two way-binding
+4) Directives - *ngIf, *ngFor, [ngStyle], [ngClass], *ngIf-else, [ngSwitch] - *ngSwitchCase - *ngSwitchDefault
+
+5)Component communication:
+	-> Child to parent communication (Custom event) using @Output('alias') Decorator with alias.
+	-> Parent to child communication (Custom property) using @Input('alias') Decorator with alias.
+6) Local reference - #nameOfLocalReference,It's reference of this element. You can use it 
+anywhere in same html file but not in ts file. Can be used passing to method in html then will be able to 
+to access in ts.
+7) @ViewChild() - Sometimes you want to use LR before call the method
+8) ng-content - You can pass the html from parent component to child component (using ng-content in child 
+component where do you want to render the html).
+9) ng-content with @ContentChild() - It's like @ViewChild() but here we access the element through ng-content.
+
+10) Custom attribute directive - to make it, Renderer2 is the better way to do this. used for DOM manipulation.
+11) @HostListener() - To listen the event of hosted element
+12) @HostBinding() - Used to bind the property of hosted element
+13) Custom structure directive
+14) Services - Shareing data between multiple components.
+15) Routing - Parameter, Query parameter and fragment, redirecting 
+and wildcard route.
+
+1) Observable - Custom observable, operator(like map(), filter()), Subcribe(), Unsubscribe(),
+Subject (it is same as eventEmitter, use subject insteam of eventEmitter)
+2) Pipe - Custom pipe, Built-in pipe : async pipe, json pipe, Number pipe, Currency pipe, Date pipe, slice pipe.
+3) Http request - setHeaders, QueryParams
+4) Lazy loading of Module and component

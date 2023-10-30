@@ -1,0 +1,83 @@
+
+<!-- Dynamic component loading -->
+<ng-template appPlaceholder></ng-template>
+
+<app-navbar (onSelectHomeemit)="selectHome($event)" (onSelectLRemit)="selectLR($event)" (directives)="selectDir($event)"></app-navbar>
+
+<app-home *ngIf="addressHome === 'home'"></app-home>
+<app-local-reference *ngIf="addressLR === 'local-reference'"></app-local-reference>
+<app-directives *ngIf="dir === 'directives'"></app-directives>
+
+<!-- Service in angular -->
+<!-- <app-service-home></app-service-home>
+<app-footer></app-footer> -->
+
+<!-- Pipes (|) in angular: it only used in .html to format the output -->
+<!-- <app-pipes></app-pipes> -->
+
+<!-- Property binding -->
+<div class="container">
+    <h2>Property binding</h2>
+    <!-- string interpolation -->
+    <input type="text" value="{{name}}" disabled="{{disable}}"><br><br>
+    <!-- Property binding -->
+    <input type="text" [value]="name" [disabled]="disable">
+</div>
+
+
+<!-- custom module/admin -->
+<!-- <div class="container">
+    <ul>
+        <li><a routerLink="admin/login">Login</a></li>
+        <li><a routerLink="admin/list">List</a></li>
+    </ul>
+</div> -->
+
+<!-- lazy-customer module -- lazy module loading -->
+<button class="btn btn-primary mx-3"><a class="text-white" routerLink="/cockpit">Cockpit</a></button>
+<!-- <button class="btn btn-primary"><a class="text-white" routerLink="/">Observable</a></button> -->
+<div class="container">
+    <ul>
+        <li><a routerLink="lazyCustomer/login">Login</a></li>
+        <li><a routerLink="lazyCustomer/list">List</a></li>
+    </ul>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- Lazy compenent loading -->
+<div class="container mt-4">
+    <button (click)="loadAdminlist()">Load Admin List</button>
+    <button class="m-3" (click)="loadUserlist()">Load User List</button>
+</div>
+
+<!-- Custom pipes -->
+<div class="container my-3">
+    <!-- <h4>Custom pipes</h4> -->
+    <!-- <h3>{{20 | usdInr}}</h3> -->
+
+    <!-- With argument -->
+    <!-- <h3>{{20 | usdInr: 72}}</h3>  -->
+</div>
+
+<!-- Custom Directives -->
+<div class="container my-4">
+    <!-- <h3>Custom directives</h3> -->
+    <!-- <h5 appRedElement>Basic custom directives</h5> -->
+    <!-- <h5 appBetterDirective>Better custom directives using renderer2</h5> -->
+    <!-- <h5 appBetterDirective [defaultColor]="'yellow'" [highlightColor]="'red'">Better custom attribute directives using custom property binding</h5> -->
+    <!-- <h5 [appBetterDirective]="'red'" [defaultColor]="'yellow'">Better custom attribute directives using 'property name same as directive name'</h5> -->
+    <!-- <h5 [appBetterDirective]="'red'" defaultColor="yellow">Better custom attribute directives using 'property name same as directive name'</h5> -->
+
+    <!-- <button (click)="tgl()">Toogle using Custom structure directives</button>
+    <h5 *appUnless="onlyOdd">Custom structure directives</h5> -->
+</div>
+
+<!-- Observable in angular -->
+<!-- <div class="container my-4">
+    <h4>Observable tutorial</h4>
+    <app-observable></app-observable>
+</div> -->
+
+<!-- Dynamic component loading -->
+<!-- <ng-template appPlaceholder></ng-template> -->
