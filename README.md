@@ -61,7 +61,10 @@ Angular is a popular open-source web application framework maintained by Google.
 - **@HostListener():** Listen to the event of the hosted element.
 - **@HostBinding():** Used to bind the property of the hosted element.
 - **Encapsulations:**
-- **Change detection technique:**
+- **Change detection technique:** In Angular, change detection is the mechanism that keeps the component’s data (model/state) and the UI (view/template) in sync.
+  - Default (CheckAlways) → Angular checks every component.
+  - OnPush → Only checks when @Input changes or events happen → faster.
+  - Manual (ChangeDetectorRef) → Full developer control.
 
 - **Routing:**
     - Angular provides a powerful router for managing navigation in a single-page application.
